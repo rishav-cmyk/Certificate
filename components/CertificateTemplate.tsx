@@ -25,12 +25,16 @@ const CertificateTemplate: React.FC<Props> = ({ data }) => {
         {/* Header Section */}
         <div className="flex justify-between items-start border-b-2 border-brand-blue pb-4 mb-8">
           <div className="flex items-center">
-            {/* Logo Simulation based on reference */}
-            <div className="flex items-center gap-2">
-               {/* Simulating the Logo Icon */}
-               <div className="w-10 h-10 bg-gradient-to-b from-blue-400 to-green-400 rounded-b-full rounded-tr-full rounded-tl-sm relative"></div>
-               <span className="text-3xl font-bold text-blue-500 tracking-tight font-sans">unacademy</span>
-            </div>
+            {/* Dynamic Logo */}
+            {assets.logoUrl ? (
+                <img src={assets.logoUrl} alt="Logo" className="h-12 w-auto object-contain" />
+            ) : (
+                <div className="flex items-center gap-2">
+                    {/* Fallback Simulation if no logo URL */}
+                    <div className="w-10 h-10 bg-gradient-to-b from-blue-400 to-green-400 rounded-b-full rounded-tr-full rounded-tl-sm relative"></div>
+                    <span className="text-3xl font-bold text-blue-500 tracking-tight font-sans">unacademy</span>
+                </div>
+            )}
           </div>
           
           <div className="text-right text-sm text-gray-700 font-sans w-1/2">

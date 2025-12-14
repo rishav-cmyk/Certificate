@@ -1,0 +1,5 @@
+{
+  "name": "Dynamic Certificate Generator",
+  "description": "A professional certificate generation system that fetches employee records and assets (logo, stamp, watermark) to generate an A4 printable No Dues Certificate.",
+  "requestFramePermissions": []
+}
